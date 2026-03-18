@@ -6,19 +6,33 @@
 
 # Agentic Machine Learning for Multi-Omics Breast Cancer Subtyping
 
-This project implements a machine learning pipeline to classify breast cancer samples into intrinsic molecular subtypes using the PAM50 gene expression panel. The PAM50 signature uses expression levels from 50 genes to categorize tumors into biologically distinct subtypes including Luminal A, Luminal B, HER2-enriched, Basal-like, and Normal-like. These subtypes are associated with differences in prognosis, tumor biology, and treatment response.
+This project includes a data engineering and machine learning pipeline using both classical and agentic AI methods to classify breast cancer samples into intrinsic molecular subtypes using multi-omics data. The PAM50 signature uses expression levels from 50 genes to categorize tumors into biologically distinct subtypes, associated with differences in prognosis, tumor biology, and treatment response, including:
+- Luminal A
+- Luminal B
+- HER2-enriched
+- Basal-like
+- Normal-like
 
-The workflow processes gene expression data from publicly available cancer genomics datasets such as The Cancer Genome Atlas and Molecular Taxonomy of Breast Cancer International Consortium, performs preprocessing and feature extraction, and applies statistical and machine learning techniques to reproduce or approximate PAM50 subtype classification. Dimensionality reduction and visualization methods such as PCA are used to explore clustering patterns among tumor samples, while model outputs are evaluated to assess classification accuracy and biological consistency.
+The workflow processes gene expression data from publicly available cancer genomics datasets (The Cancer Genome Atlas and Molecular Taxonomy of Breast Cancer International Consortium), performs preprocessing and feature extraction, and applies statistical and machine learning techniques to reproduce or approximate PAM50 subtype classification. Dimensionality reduction and visualization methods such as PCA are used to explore clustering patterns among tumor samples, while model outputs are evaluated to assess classification accuracy and biological consistency. Finally, artificial intelligence was used to enhance the model predictions beyond classic machine learning.
 
 The goal of the project is to demonstrate how genomic data can be integrated with machine learning techniques to support molecular subtype prediction and exploratory analysis in cancer genomics.
 
+My portion of the project included scientific background and integration, data acquisition, and data engineering. My colleagues, Drs. Bonat and Fetisov continued the workflow with machine learning and deployment.
+
 ## Table of Contents
 
-- Background
-- Data Engineering
-- Contact
+- [Multi-Omics](#multi-omics)
+- [Breast Cancer and PAM50](#breast-cancer-and-pam50)
+- [Data Engineering](#data-engineering)
+- [Contact](#contact)
 
-## Background
+## 🧬 Multi-Omics
+
+Multi-omics refers to the integrated analysis of multiple layers of biological data—such as genomics (DNA), transcriptomics (RNA), proteomics (proteins), and metabolomics (metabolites)—to provide a more comprehensive view of biological systems. Instead of examining each data type in isolation, multi-omics approaches combine these datasets to uncover complex interactions, regulatory mechanisms, and molecular signatures that drive cellular function and disease. This holistic perspective is especially valuable in fields like cancer research and precision medicine, where understanding how different molecular layers interact can lead to more accurate classifications, biomarker discovery, and targeted therapies.
+
+![](https://github.com/user-attachments/assets/7a901a60-9d69-41b8-8af1-9db2b9dbb301)
+
+## 🧪 Breast Cancer and PAM50
 
 Breast cancer is a biologically heterogeneous disease, meaning tumors that appear similar under a microscope can behave very differently at the molecular level. Advances in gene expression profiling have enabled researchers to classify breast tumors into molecular subtypes that better reflect underlying tumor biology and clinical outcomes. One widely used approach is the PAM50 gene expression signature, which measures the expression of 50 genes to categorize tumors into intrinsic subtypes: Luminal A, Luminal B, HER2-enriched, Basal-like, and Normal-like. These subtypes are associated with differences in prognosis, treatment response, and biological characteristics such as proliferation, hormone receptor signaling, and growth factor pathway activation.
 
@@ -26,13 +40,19 @@ Large cancer genomics initiatives have made it possible to study these molecular
 
 In this project, gene expression data are used to explore and reproduce PAM50-based breast cancer subtype classification using computational and machine learning techniques. By applying data preprocessing, dimensionality reduction, and classification methods, the project demonstrates how genomic data can be leveraged to identify biologically meaningful tumor subtypes and support data-driven insights in cancer genomics.
 
-## Data Engineering
+![](https://github.com/user-attachments/assets/81720018-6565-40ff-80bf-8fb52e43af80)
+
+## 🛠️ Data Engineering
 
 The data engineering pipeline prepares gene expression data for downstream analysis and subtype classification. Raw expression data from large-scale cancer genomics datasets such as The Cancer Genome Atlas and Molecular Taxonomy of Breast Cancer International Consortium were imported and processed to ensure consistency and usability for analysis. Initial steps included cleaning the dataset, handling missing values, and aligning gene identifiers to match the 50 genes defined in the PAM50 panel.
 
-After filtering for the PAM50 genes, the data were transformed into a structured format where each row represents a tumor sample and each column represents the expression level of a specific gene. Normalization and scaling were applied to reduce technical variability across samples and ensure that gene expression levels were comparable. These preprocessing steps help stabilize the data distribution and improve the performance of downstream statistical and machine learning analyses.
+After filtering for the PAM50 genes, the data were transformed into a structured format where each row represents a tumor sample and each column represents the expression level of a specific gene. Normalization and scaling were previously applied by the study authors and verified to reduce technical variability across samples and ensure that gene expression levels were comparable. These preprocessing steps help stabilize the data distribution and improve the performance of downstream statistical and machine learning analyses while providing a comprehensive multi-omics view of real clinical breast cancer data.
 
 Additional feature preparation steps included verifying gene coverage across samples and removing samples with incomplete data. The resulting dataset represents a clean expression matrix suitable for dimensionality reduction, visualization, and subtype classification using the PAM50 gene set. This engineered dataset serves as the foundation for the modeling and exploratory analysis stages of the project.
 
-## Contact
-[Paul London](https://www.linkedin.com/in/palondon)
+![](https://github.com/user-attachments/assets/0e0f5c72-7fe3-4eb2-bb29-359eb6a5848f)
+
+## 📬 Contact
+- [Paul London](https://www.linkedin.com/in/palondon)
+- [Ernest Bonat](https://www.linkedin.com/in/ernest-bonat-ph-d-8888b319/)
+- [Nikolai Fetisov](https://www.linkedin.com/in/nnfetisov/)
